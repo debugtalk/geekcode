@@ -2,10 +2,9 @@
 >
 > 极客时间版权所有: [https://time.geekbang.org/column/article/73511](QRcode.jpeg)
 
+## Java implementation
 
 ```java
-// Java implementation
-
 import java.util.ArrayList;
 
 public class Lesson5_1 {
@@ -44,18 +43,19 @@ public class Lesson5_1 {
 }
 ```
 
+## Python implementation
+
 ```python
-# Python implementation
 
 import copy
 
 rewards = [1, 2, 5, 10]    # 四种面额的纸币
 
-def get(total_reword, result):
+def get_sum_combo(total_reword, result=[]):
     """ 使用函数的递归（嵌套）调用，找出所有可能的奖赏组合
 
     Args:
-        totalReward: 奖赏总金额
+        total_reword: 奖赏总金额
         result: 保存当前的解
 
     Returns: void
@@ -70,16 +70,20 @@ def get(total_reword, result):
         for i in range(len(rewards)):
             new_result = copy.copy(result)
             new_result.append(rewards[i])
-            get(total_reword - rewards[i], new_result)
-
+            get_sum_combo(total_reword - rewards[i], new_result)
 
 if __name__ == "__main__":
-    result = []
-    get(2, result)
+    get_sum_combo(2)
     # [1, 1]
     # [2]
-    get(3, result)
+    get_sum_combo(3)
     # [1, 1, 1]
     # [1, 2]
     # [2, 1]
 ```
+
+## 思考题
+
+一个整数可以被分解为多个整数的乘积，例如，6可以分解为2x3。请使用递归编程的方法，为给定的整数n，找到所有可能的分解（1在解中最多只能出现1次）。例如，输入8，输出是可以是1x8, 8x1, 2x4, 4x2, 1x2x2x2, 1x2x4, ……
+
+[答案](chapter5.py)
