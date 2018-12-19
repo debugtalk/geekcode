@@ -1,6 +1,6 @@
 > 题目：假设有四种面额的钱币，1元、2元、5元和10元，而您一共给我10元，那您可以奖赏我1张10元，或者10张1元，或者5张1元外加1张5元等等。如果考虑每次奖赏的金额和先后顺序，那么最终一共有多少种不同的奖赏方式呢？
 >
-> 极客时间版权所有: https://time.geekbang.org/column/article/73511
+> 极客时间版权所有: [https://time.geekbang.org/column/article/73511](QRcode.jpeg)
 
 
 ```java
