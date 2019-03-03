@@ -2,6 +2,6 @@
 
 Learn algorithm with geektime and leetcode.
 
-- [Array](array/README.md)
+- [Array](Array/README.md)
 - [Linked List]()
-- [递归](recursion/README.md)
+- [递归](Recursion/README.md)
