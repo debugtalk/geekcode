@@ -1,7 +1,7 @@
-# geektime-notes
+# GeekCode
 
-极客时间学习笔记
+Learn algorithm with geektime and leetcode.
 
-## 目录
-
-- [程序员的数学基础课](programmers-mathematics/README.md)
+- [Array](array/README.md)
+- [Linked List]()
+- [递归](recursion/README.md)
