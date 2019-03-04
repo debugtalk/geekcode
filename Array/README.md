@@ -2,7 +2,7 @@
 
 ## 理论基础
 
-[《数据结构与算法: 数组》](https://debugtalk.com/post/data-structure-algorithm-array/)
+[《数据结构与算法: 数组》](https://debugtalk.com/post/algorithm-array/)
 
 ## LeetCode
 
