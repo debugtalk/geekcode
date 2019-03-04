@@ -77,18 +77,17 @@ class TestSolution(unittest.TestCase):
         self.s = Solution()
 
     def prepare_linkedlist(self, nums):
-        if len(nums) == 0:
-            return None
-
-        node = ListNode(nums[0])
-        head = node
-        for num in nums[1:]:
-            node.next = ListNode(num)
-            node = node.next
+        head = None
+        for num in nums:
+            if not head:
+                head = curr = ListNode(num)
+            else:
+                curr.next = ListNode(num)
+                curr = curr.next
 
         return head
 
-    def read_linked_list(self, head):
+    def load_linkedlist(self, head):
         nums = []
         while head:
             nums.append(head.val)
@@ -101,17 +100,16 @@ class TestSolution(unittest.TestCase):
         raw_link_head = self.prepare_linkedlist(nums)
         reversed_head = self.s.reverseList(raw_link_head)
         self.assertEqual(
-            self.read_linked_list(reversed_head),
+            self.load_linkedlist(reversed_head),
             [5,4,3,2,1]
         )
-
 
     def test_2(self):
         nums = []
         raw_link_head = self.prepare_linkedlist(nums)
         reversed_head = self.s.reverseList(raw_link_head)
         self.assertEqual(
-            self.read_linked_list(reversed_head),
+            self.load_linkedlist(reversed_head),
             []
         )
 
